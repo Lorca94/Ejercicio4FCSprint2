@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" type="text/css" rel="stylesheet" >
+    <title>Tabla de Alumnos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+        <header>
+            <h2>OpenBootcamp<span>| Alumnos</span> </h2>
+        </header>
+        <div class="tablacandidatos">
+            <div class="menuytabla">
+                <div class="menu">
+                    <label>Alumnos</label>
+                    <input type="text" name="filtro" id="filtro" placeholder=" 🔎 Buscar por Nombre, Email o Palabra clave...">
+                    <div style="width: 30%;">   </div>
+                    <button>+ Añadir Alumno</button>
+                </div>
+                    
+                <div class="tabla" id="miTabla">
+                    <table id ="tabla">
+                        <thead>
+                            <th onclick="ordenarTabla(0,'str')">NOMBRE </th>
+                            <th onclick="ordenarTabla(1,'str')">CIUDAD  <img src="css/Vector.png"></th>
+                            <th onclick="ordenarTabla(2,'str')">PAIS  <img src="css/Vector.png"></th>
+                            <th onclick="ordenarTabla(3,'str')">TELEFONO  <img src="css/Vector.png"></th>
+                            <th onclick="ordenarTabla(4,'str')">CORREO ELECTRÓNICO  <img src="css/Vector.png"></th>
+                            <th>ETIQUETAS  <img src="css/Vector.png"></th>
+                        </thead>
+                
+                        <tbody>
+                            <tr>
+                                <td>Roberto Gomez Gomez</td>
+                                <td>Valencia</td>
+                                <td>España</td>
+                                <td>+34 685432123</td>
+                                <td>example@gmail.com</td>
+                                <td> 
+                                    <div class="etiquetas">
+                                        <div class=etiqueta>
+                                            <label>HTML&CSS</label>
+                                        </div>
+                                        <div class=etiqueta>
+                                            <label>HTML&CSS</label>
+                                        </div>
+                
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nombre de Pureba1</td>
+                                <td>Lorca</td>
+                                <td>España</td>
+                                <td>+34 647 9437349</td>
+                                <td>example1@gmail.com</td>
+                                <td> 
+                                    <div class="etiquetas">
+                                        <div class=etiqueta>
+                                            <label>HTML&CSS</label>
+                                        </div>
+                                        <div class=etiqueta>
+                                            <label>HTML&CSS</label>
+                                        </div>
+                
+                                    </div>
+                                </td>
+                            </tr>
+                
+                            <tr>
+                                <td>Nombre de Pureba2</td>
+                                <td>Almuñecar</td>
+                                <td>España</td>
+                                <td>+34 2387392374</td>
+                                <td>example2@gmail.com</td>
+                                <td> 
+                                    <div class="etiquetas">
+                                        <div class=etiqueta>
+                                            <label>HTML&CSS</label>
+                                        </div>
+                                        <div class=etiqueta>
+                                            <label>HTML&CSS</label>
+                                        </div>
+                
+                                    </div>
+                                </td>
+                            </tr>
+                
+                            <tr>
+                                <td>Nombre de Pureba3</td>
+                                <td>Gijon</td>
+                                <td>España</td>
+                                <td>+34 2387392374</td>
+                                <td>example3@gmail.com</td>
+                                <td> 
+                                    <div class="etiquetas">
+                                        <div class=etiqueta>
+                                            <label>HTML&CSS</label>
+                                        </div>
+                                        <div class=etiqueta>
+                                            <label>HTML&CSS</label>
+                                        </div>
+                
+                                    </div>
+                                </td>
+                            </tr>
+                
+                        </tbody>
+                
+                    </table>
+                
+                    <script>
+                        /**
+                         * Funcion para ordenar una tabla... tiene que recibir el numero de columna a
+                         * ordenar y el tipo de orden
+                         * @param int n
+                         * @param str type - ['str'|'int']
+                         */
+                        function ordenarTabla(n,type) {
+                          let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                         
+                          table = document.getElementById("tabla");
+                          switching = true;
+                          //Ordenar tabla en dirección ascendete
+                          dir = "asc";
+                         
+                          /*Bucle que se mantendrá en uso mientras no se hayan realizado los cambios*/
+
+                          while (switching) {
+                            //start by saying: no switching is done:
+                            switching = false;
+                            rows = table.rows;
+                            /*Con el for se toman todos los valores excepto los cabezales:*/
+                            for (i = 1; i < (rows.length - 1); i++) {
+
+                              shouldSwitch = false;
+                              /*Obtenemos los dos valores a comprobar */
+                              x = rows[i].getElementsByTagName("TD")[n];
+                              y = rows[i + 1].getElementsByTagName("TD")[n];
+                              /*Se comprueba si está en orden ascendente o descente:*/
+                              if (dir == "asc") {
+                                if ((type=="str" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) || (type=="int" && parseFloat(x.innerHTML) > parseFloat(y.innerHTML))) {
+                                    //Sí se ha realizado cambiamos a true y se termina bucle
+                                  shouldSwitch= true;
+                                  break;
+                                }
+                              } else if (dir == "desc") {
+                                if ((type=="str" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) || (type=="int" && parseFloat(x.innerHTML) < parseFloat(y.innerHTML))) {
+                                    //Sí se ha realizado cambiamos a true y se termina bucle
+                                  shouldSwitch = true;
+                                  break;
+                                }
+                              }
+                            }
+                            if (shouldSwitch) {
+                            
+                              rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                              switching = true;
+                        
+                              switchcount ++;
+                            } else {
+                              if (switchcount == 0 && dir == "asc") {
+                                dir = "desc";
+                                switching = true;
+                              }
+                            }
+                          }
+                        }
+                        </script>
+
+                </div>
+
+
+            </div>
+
+            <div class = "menu-lateral">
+                <div class = "menu-lateral__titulo">
+                    <label class="menu-lateral__titulo">Filtro de búsqueda                 </label>
+                    <img src="css/basura_vector.png" >
+                </div>
+                
+                <div class = "menu-lateral__filtro">
+                    <div class = "menu-lateral__filtro-etiquetas">
+                        <label>Etiquetas</label>
+                        <input type="search" name="busquedaetiquetas" list="listaetiquetas" placeholder="  Escribe para buscar">
+                        <datalist id="listaetiquetas">
+                            <option value="HTML&CSS">
+                            <option value="REACT">
+                            <option value="SPRINT">
+                            <option value="JAVA">
+                        </datalist>
+                    </div>
+                    <div class="menu-lateral__filtrado-etiquetas">
+
+                    </div>
+                    <div class="menu-lateral__filtro-pais">
+                        <label>País</label>
+                        <select name="País">
+                            <option value="1">España</option> 
+                            <option value="2">Argentina</option> 
+                            <option value="3">México</option>
+                            <option value="4">Ecuador</option> 
+                            <option value="5">Colombia</option> 
+                        </select>
+                    </div>
+                    <div class="menu-lateral__filtro-pais">
+                        <label>Ciudad</label>
+                        <select name="País">
+                            <option value="1">Murcia</option> 
+                            <option value="2">Valencia</option> 
+                            <option value="3">Madrid</option>
+                            <option value="4">Barcelona</option> 
+                            <option value="5">Sevilla</option> 
+                        </select>
+                    </div>
+
+                    <div class="menu-lateral__filtro-presencial">
+                        <label class="menu-lateral__filtro-presencial--titulo">Presencial/a distancia</label>
+                        <div class="menu-lateral__filtro-presencial--check">
+                            <input name="presencial" id="presencial" type="checkbox"><label for="presencial">Presencial</label>
+                        </div>
+
+                        <div class="menu-lateral__filtro-presencial--check">
+                            <input name="remoto" id="remoto" type="checkbox"><label for="remoto">En remoto</label>
+                        </div>
+                    </div>
+
+                    <div class="menu-lateral__filtro-presencial">
+                        <label class="menu-lateral__filtro-presencial--titulo">Posibilidad de traslado</label>
+                        <div class="menu-lateral__filtro-presencial--check">
+                            <input name="movilidadOK" id="movilidad" type="checkbox"><label for="movilidadOK">Sí</label>
+                        </div>
+
+                        <div class="menu-lateral__filtro-presencial--check">
+                            <input name="movilidadKO" id="movilidad" type="checkbox"><label for="movilidadKO">No</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div >
+        </div>
+</body>
+</html>

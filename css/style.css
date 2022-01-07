@@ -1,0 +1,499 @@
+*{
+    margin:0;
+    padding: 0;
+}
+html,body{
+
+    background: #F8F8F9;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: relative;
+    width: 100%;
+    height: 70px;
+    padding: 18px 40px 12px;
+    background-color: #F8F8F9;
+}
+h2{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-weight: 1.75em;
+
+    color: #121625;
+}
+
+span{
+    color: #32D4A4
+}
+
+.tablacandidatos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    margin-left: 5%;
+    width: 1920px;
+    height: 830px;
+    left: 0px;
+    top: 70px;
+}
+
+.menuytabla{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 1346px;
+    height: 750px;
+    left: 40px;
+    top: 40px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 1346px;
+    height: 40px;
+    left: 0px;
+    top: 0px;
+
+}
+.menu label{
+    position: static;
+    width: 80px;
+    height: 20px;
+    left: 0px;
+    top: 10px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+
+    color:#121625;
+}
+
+.menu input{
+    position: static;
+    width: 27%;
+    height: 40px;
+    left: 104px;
+    top: 0px;
+
+    background: #E6E6EA;
+    border-radius: 8px;
+    margin: 0 24px;
+}
+
+.menu button{
+    position: static;
+    width: 35%;
+    height: 40px;
+    left: 1178px;
+    top: 0px;
+
+    background-color: #FFFFFF;
+    border:  1px solid #E6E6EA;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin: 0 15px;
+}
+
+.tabla {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 1346px;
+    height: 785px;
+    left: 0px;
+    top: 56px;
+
+/* Greys/White */
+
+    background: #FFFFFF;
+/* Greys/Grey3 */
+
+    border: 1px solid #E6E6EA;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+/* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 16px 0px;
+}
+table {
+    width: 100%;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+ }
+ th {
+    color: #A5A8B3;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 13px;
+    cursor: pointer;
+ }
+
+ th, td {
+    height: 56px;
+    text-align: center;
+}
+.etiquetas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+}
+/* Primary/Primary */
+.etiqueta{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: static;
+    width: 82px;
+    height: 22px;
+
+    background: #32D5A4;
+    border-radius: 6px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 6px;
+}
+
+.etiqueta label{
+    align-items: center;
+    position: static;
+    width: 66px;
+    height: 14px;
+    left: calc(50% - 66px/2);
+    top: 4px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+
+    color:#FFFFFF;
+}
+
+.menu-lateral{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 24px 24px;
+
+    position: static;
+    width: 330px;
+    height: 95%;
+    left: 1426px;
+    top: 80px;
+
+/* Greys/White */
+
+    background: #FFFFFF;
+/* Greys/Grey3 */
+
+    border: 1px solid #E6E6EA;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+/* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 40px;
+}
+.menu-lateral__titulo div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 282px;
+    height: 21px;
+    left: 24px;
+    top: 28px;
+
+
+/* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 28px 0px;
+}
+.menu-lateral__titulo label{
+    position: static;
+    width: 172px;
+    height: 21px;
+    left: calc(50% - 172px/2 - 55px);
+    top:    0px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+}
+.menu-lateral__titulo img{
+    left: 12.51%;
+    right: 12.49%;
+    top: 8.33%;
+    bottom: 8.33%;
+    margin-left: 100px;
+}
+
+.menu-lateral__filtro{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 282px;
+    height: 546px;
+    left: 24px;
+    top: 77px;
+
+
+/* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 28px 0px;
+}
+
+.menu-lateral__filtro-etiquetas{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    
+    position: static;
+    width: 282px;
+    height: 138px;
+    left: 0px;
+    top: 0px;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 25px 0px;
+}
+
+.menu-lateral__filtro-etiquetas label{
+    position: static;
+    width: 282px;
+    height: 16px;
+    left: 0px;
+    top: 0px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.menu-lateral__filtro-etiquetas input{
+    position: static;
+    width: 282px;
+    height: 40px;
+    left: 0px;
+    top: 28px;
+
+/* Greys/Grey1 */
+
+    background: #F8F8F9;
+    border-radius: 8px;
+    border-style: none;
+
+/* Inside auto layout */
+
+    flex: none;
+
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 12px 0px;
+}
+.menu-lateral__filtro-pais{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 282px;
+    height: 68px;
+    left: 0px;
+    top: 163px;
+
+
+/* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 25px 0px;
+}
+
+.menu-lateral__filtro-pais label{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+}
+.menu-lateral__filtro-pais select{
+    position: static;
+    width: 282px;
+    height: 40px;
+    left: 0px;
+    top: 28px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+
+/* Greys/Grey1 */
+    
+    background: #F8F8F9;
+    border-radius: 8px;
+    border-style: none;
+    margin: 12px 0px;
+}
+
+.menu-lateral__filtro-ciudad label{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+}
+.menu-lateral__filtro-ciudad select{
+    position: static;
+    width: 282px;
+    height: 40px;
+    left: 0px;
+    top: 28px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+
+/* Greys/Grey1 */
+    
+    background: #F8F8F9;
+    border-radius: 8px;
+    border-style: none;
+    margin: 12px 0px;
+}
+
+.menu-lateral__filtro-presencial{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 282px;
+    height: 86px;
+    left: 0px;
+    top: 349px;
+
+
+/* Inside auto layout */
+
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 25px 0px;
+}
+
+.menu-lateral__filtro-presencial--titulo{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+}
+
+.menu-lateral__filtro-presencial--check{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 282px;
+    height: 24px;
+    left: 0px;
+    top: 0px;
+}
+
+.menu-lateral__filtro-presencial--check input{
+    position:relative;
+    
+    background: #A5A8B3;
+}
+
+.menu-lateral__filtro-presencial--check label{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    margin: 0px 10px;
+}
